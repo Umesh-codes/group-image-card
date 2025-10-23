@@ -1,0 +1,84 @@
+{
+  "$schema": "https://ml-configurations.s3.us-east-1.amazonaws.com/template/project.schema.json",
+  "pages": [
+    {
+      "pageName": "page 1",
+      "pageId": "",
+      "route": "/",
+      "data": [
+        {
+          "type": "grid",
+          "style": {},
+          "cols": [
+            {
+              "colspan": "12",
+              "style": {},
+              "colData": [
+                {
+                  "brikId": "@koadz/group-image-card",
+                  "brikName": "group-image-card",
+                  "type": "brik",
+                  "editorId": "8b27f4a6-a465-428d-a252-542c732761cb",
+                  "version": "1.0.0",
+                  "editable": true,
+                  "style": {
+                    "font": {
+                      "family": "",
+                      "size": "",
+                      "style": "",
+                      "color": "",
+                      "weight": ""
+                    },
+                    "backgroundColor": "",
+                    "color": ""
+                  },
+                  "data": [
+                    {
+                      "content": {
+                        "value": "",
+                        "label": "",
+                        "type": "",
+                        "for": "",
+                        "src": "",
+                        "link": ""
+                      },
+                      "style": {
+                        "font": {
+                          "family": "",
+                          "size": "",
+                          "style": "",
+                          "color": "",
+                          "weight": ""
+                        },
+                        "backgroundColor": "",
+                        "margin": "",
+                        "padding": ""
+                      },
+                      "id": "",
+                      "editable": true,
+                      "display": "block"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "template": {
+    "id": "",
+    "name": "",
+    "category": "",
+    "description": ""
+  },
+  "config": {
+    "theme": {},
+    "redux": {},
+    "pageSettings": {
+      "background": "",
+      "margin": ""
+    }
+  }
+}
