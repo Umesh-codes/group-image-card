@@ -3,12 +3,12 @@
   "root": true,
   "brikId": "@koadz/group-image-card",
   "version": "1.0.0",
-  "brikName": "@koadz/group-image-card",
+  "brikName": "group-image-card",
   "author": "Umesha B M <umesha.bm@makelooplabs.com>",
   "brikType": [
     "generic"
   ],
-  "published": false,
+  "published": true,
   "categories": [
     "basic"
   ],
