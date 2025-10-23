@@ -16,7 +16,7 @@
               "colData": [
                 {
                   "brikId": "@koadz/group-image-card",
-                  "brikName": "group-image-card",
+                  "brikName": "GroupImageCards",
                   "type": "brik",
                   "editorId": "8b27f4a6-a465-428d-a252-542c732761cb",
                   "version": "1.0.0",
