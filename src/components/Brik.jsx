@@ -44,6 +44,7 @@ function Brik({ data, theme }) {
           },
         }}
         h={imageObj?.style?.height || "auto"}
+        {...imageObj?.content?.props}
       >
         <Grid w="100%">
           <Grid.Col span={12}>
@@ -64,6 +65,7 @@ function Brik({ data, theme }) {
                 fw={headlineText?.style?.font?.weight}
                 ta={headlineText?.style?.alignment}
                 ff={headlineText?.style?.font?.family}
+                {...headlineText?.content?.props}
               >
                 {headlineText?.content?.value}
               </Text>

@@ -70,35 +70,60 @@ export default function GroupImageCards({ data, theme }) {
         const [imgData, titleData, subTitleData] = card || [];
 
         return (
-          <Grid.Col key={index} span={{ base: 12, sm: 6, md: 3 }}>
+          <Grid.Col
+            key={index}
+            span={{ base: 12, sm: 6, md: 3 }}
+            id={`groupTestimonial_${index}`}
+          >
             <Box
               {...getMargin(imgStyle?.margin)}
               {...getPadding(imgStyle?.padding)}
+              style={{
+                // ...getBorderStyles(imgStyle?.border),
+                // ...getMargin(imgStyle?.margin),
+                // ...getPadding(imgStyle?.padding),
+                h: imgStyle?.height || "400px",
+                w: imgStyle?.width || "100%",
+              }}
             >
               <BackgroundImage
+                id={`groupTestimonial_${index}`}
                 src={imgData?.src}
                 styles={{
                   root: {
                     backgroundColor: getColor(imgStyle?.backgroundColor),
+                    ...getBorderStyles(imgStyle?.border),
+                    ...getMargin(imgStyle?.margin),
+                    ...getPadding(imgStyle?.padding),
                   },
                 }}
                 h={imgStyle?.height || "400px"}
+                w={imgStyle?.width || "100%"}
                 pos={"relative"}
                 style={{
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-end", // pushes children to bottom
                 }}
+                {...imgData?.props}
               >
                 {isOverlay && (
                   <Overlay
                     color="#000"
                     opacity={0.33} // semi-transparent
                     zIndex={1}
+                    style={{
+                      ...getBorderStyles(imgStyle?.border),
+                      ...getMargin(imgStyle?.margin),
+                      ...getPadding(imgStyle?.padding),
+                    }}
+                    w={imgStyle?.width || "100%"}
+                    h={imgStyle?.height || "400px"}
                   />
                 )}
 
                 <Text
+                  id={`groupTestimonial_${index}`}
                   m={titleStyle?.margin}
                   p={titleStyle?.padding}
                   fz={{
@@ -107,13 +132,18 @@ export default function GroupImageCards({ data, theme }) {
                   }}
                   c={getColor(titleStyle?.font?.color || theme?.black)}
                   bg={getColor(titleStyle?.backgroundColor || "transparent")}
+                  // style={{
+                  //   ...getBorderStyles(titleStyle?.border),
+                  // }}
                   fw={titleStyle?.font?.weight}
                   ff={titleStyle?.font?.family}
                   ta={titleStyle?.alignment}
+                  {...titleData?.props}
                 >
                   {titleData?.value}
                 </Text>
                 <Text
+                  id={`groupTestimonial_${index}`}
                   m={subTitleStyle?.margin}
                   p={subTitleStyle?.padding}
                   fz={{
@@ -123,9 +153,13 @@ export default function GroupImageCards({ data, theme }) {
                   lh={{ base: "1.6", sm: "1.8" }}
                   c={getColor(subTitleStyle?.font?.color || theme?.black)}
                   bg={getColor(subTitleStyle?.backgroundColor || "transparent")}
+                  // style={{
+                  //   ...getBorderStyles(subTitleStyle?.border),
+                  // }}
                   fw={subTitleStyle?.font?.weight}
                   ta={subTitleStyle?.alignment}
                   ff={subTitleStyle?.font?.family}
+                  {...subTitleData?.props}
                 >
                   {subTitleData?.value}
                 </Text>
