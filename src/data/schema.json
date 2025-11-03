@@ -52,7 +52,7 @@
                       "style": {
                         "backgroundColor": "white",
                         "margin": "",
-                        "padding": "0px 80px 50px 80px",
+                        "padding": "0 40 0 40",
                         "opacity": ""
                       },
                       "id": "background",
@@ -184,7 +184,7 @@
                           "for": "img",
                           "width": "",
                           "height": "",
-                          "margin": "",
+                          "margin": "10 10 10 10",
                           "padding": "",
                           "border": {
                             "size": "",

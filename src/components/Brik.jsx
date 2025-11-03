@@ -47,8 +47,8 @@ function Brik({ data, theme }) {
         {...imageObj?.content?.props}
       >
         <Grid w="100%">
-          <Grid.Col span={12}>
-            {headlineText?.display !== "none" && (
+          {headlineText?.display !== "none" && (
+            <Grid.Col span={12}>
               <Text
                 id={headlineText?.id}
                 m={headlineText?.style?.margin}
@@ -69,8 +69,8 @@ function Brik({ data, theme }) {
               >
                 {headlineText?.content?.value}
               </Text>
-            )}
-          </Grid.Col>
+            </Grid.Col>
+          )}
           {cardGroup?.display !== "none" && (
             <GroupImageCards data={data} theme={theme} />
           )}
