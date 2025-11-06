@@ -129,8 +129,7 @@ export default function GroupImageCards({ data, theme }) {
                     base: "18px",
                     sm: titleStyle?.font?.size || "20px",
                   }}
-                  c={getColor(titleStyle?.font?.color || theme?.black)}
-                  bg={getColor(titleStyle?.backgroundColor || "transparent")}
+                  c={getColor(titleStyle?.font?.color)}
                   fw={titleStyle?.font?.weight}
                   ff={titleStyle?.font?.family}
                   ta={titleStyle?.alignment}
@@ -145,8 +144,7 @@ export default function GroupImageCards({ data, theme }) {
                     sm: subTitleStyle?.font?.size || "16px",
                   }}
                   lh={{ base: "1.6", sm: "1.8" }}
-                  c={getColor(subTitleStyle?.font?.color || theme?.black)}
-                  bg={getColor(subTitleStyle?.backgroundColor || "transparent")}
+                  c={getColor(subTitleStyle?.font?.color)}
                   fw={subTitleStyle?.font?.weight}
                   ta={subTitleStyle?.alignment}
                   ff={subTitleStyle?.font?.family}

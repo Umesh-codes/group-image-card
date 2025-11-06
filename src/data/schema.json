@@ -52,7 +52,7 @@
                       "style": {
                         "backgroundColor": "white",
                         "margin": "",
-                        "padding": "0 40 0 40",
+                        "padding": "30 80 30 80",
                         "opacity": ""
                       },
                       "id": "background",
@@ -94,12 +94,12 @@
                               "type": "img"
                             },
                             {
-                              "value": "CeraVe Hydrating Facial Cleanser",
+                              "value": "Hydrating Facial Cleanser",
                               "label": "Text",
                               "type": "text"
                             },
                             {
-                              "value": "A gentle, non-foaming cleanser that removes dirt and oil while maintaining the skin’s natural moisture barrier, ideal for normal to dry skin",
+                              "value": "A gentle, non-foaming cleanser",
                               "label": "SubText",
                               "type": "text"
                             }
@@ -111,12 +111,12 @@
                               "type": "img"
                             },
                             {
-                              "value": "The Ordinary Niacinamide 10% + Zinc 1% ",
+                              "value": "The Ordinary Niacinamide",
                               "label": "Text",
                               "type": "text"
                             },
                             {
-                              "value": "A lightweight serum that helps reduce blemishes, minimize pores, and balance sebum production.",
+                              "value": "A lightweight serum",
                               "label": "SubText",
                               "type": "text"
                             }
@@ -128,12 +128,12 @@
                               "type": "img"
                             },
                             {
-                              "value": "La Roche-Posay Anthelios Melt-in Milk Sunscreen SPF 60",
+                              "value": "Anthelios Milk Sunscreen",
                               "label": "Text",
                               "type": "text"
                             },
                             {
-                              "value": "A broad-spectrum sunscreen that protects against UVA and UVB rays, with a smooth, non-greasy texture suitable for sensitive skin.",
+                              "value": "A broad-spectrum sunscreen",
                               "label": "SubText",
                               "type": "text"
                             }
@@ -145,12 +145,12 @@
                               "type": "img"
                             },
                             {
-                              "value": "Medik8 Crystal Retinal 6",
+                              "value": "Crystal Retinal 6",
                               "label": "Text",
                               "type": "text"
                             },
                             {
-                              "value": "A potent nighttime serum featuring retinaldehyde, a stabilized form of vitamin A, which is known to effectively reduce signs of aging and improve skin texture.",
+                              "value": "A potent nighttime serum",
                               "label": "SubText",
                               "type": "text"
                             }
@@ -187,7 +187,7 @@
                           "margin": "10 10 10 10",
                           "padding": "",
                           "border": {
-                            "size": "",
+                            "size": "1px",
                             "color": "",
                             "radius": ""
                           }
@@ -199,7 +199,7 @@
                             "family": "",
                             "size": "",
                             "style": "",
-                            "color": "Text",
+                            "color": "black",
                             "weight": ""
                           },
                           "backgroundColor": "",
@@ -214,7 +214,7 @@
                             "family": "",
                             "size": "",
                             "style": "",
-                            "color": "Text",
+                            "color": "black",
                             "weight": ""
                           },
                           "backgroundColor": "",
