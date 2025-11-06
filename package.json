@@ -1,6 +1,6 @@
 {
   "name": "@koadz/group-image-card",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "homepage": "./",
   "main": "dist/index.cjs.js",
