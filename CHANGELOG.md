@@ -1,3 +1,15 @@
+# [v1.0.4-dev](https://github.com/Makeloop-Technology-Labs/group-image-card/releases/tag/v1.0.4-dev) (11-10-2025, 2:35:20)
+
+## 📝 Others
+
+- [9f1d847](https://github.com/Makeloop-Technology-Labs/group-image-card/commit/9f1d847a97cffe7914676b941ecfcc175411c57c) [koadz-bot]: :bookmark: Release v1.0.4-dev (_Umesh-codes_)
+
+### 👥 Contributors
+
+- [Umesh-codes](mailto:umesha.bm@makelooplabs.com)
+
+***
+
 # [v1.0.3-dev](https://github.com/Makeloop-Technology-Labs/group-image-card/releases/tag/v1.0.3-dev) (11-6-2025, 5:04:44)
 
 ## 📝 Others
@@ -45,6 +57,7 @@
 - [Umesh-codes](mailto:umesha.bm@makelooplabs.com)
 
 ***
+
 
 
 
