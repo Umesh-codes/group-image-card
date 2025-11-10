@@ -61,7 +61,7 @@
                     },
                     {
                       "content": {
-                        "value": "Our Top Skincare Products",
+                        "value": "Top Products",
                         "label": "Headline",
                         "type": "text",
                         "for": "headlineText",
@@ -70,14 +70,14 @@
                       "style": {
                         "font": {
                           "family": "",
-                          "size": "",
+                          "size": "40",
                           "style": "",
-                          "color": "Text",
+                          "color": "black",
                           "weight": "600"
                         },
                         "backgroundColor": "",
                         "margin": "0px 0px 0px 0px",
-                        "padding": "10px 0px 10px 0px",
+                        "padding": "10px 0px 20px 0px",
                         "alignment": "center"
                       },
                       "id": "headlineText",
@@ -197,14 +197,14 @@
                           "for": "text",
                           "font": {
                             "family": "",
-                            "size": "",
+                            "size": "24",
                             "style": "",
                             "color": "black",
-                            "weight": ""
+                            "weight": "500"
                           },
                           "backgroundColor": "",
                           "margin": "",
-                          "padding": "",
+                          "padding": "0 10 0 10",
                           "alignment": "left"
                         },
                         {
@@ -212,14 +212,14 @@
                           "for": "subText",
                           "font": {
                             "family": "",
-                            "size": "",
+                            "size": "16",
                             "style": "",
                             "color": "black",
-                            "weight": ""
+                            "weight": "400"
                           },
                           "backgroundColor": "",
                           "margin": "",
-                          "padding": "",
+                          "padding": "0 10 10 10",
                           "alignment": "left"
                         }
                       ],
