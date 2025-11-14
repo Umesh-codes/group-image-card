@@ -2,7 +2,7 @@
   "$schema": "https://ml-configurations.s3.us-east-1.amazonaws.com/template/config.schema.json",
   "root": true,
   "brikId": "@koadz/group-image-card",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "brikName": "group-image-card",
   "author": "Umesha B M <umesha.bm@makelooplabs.com>",
   "brikType": [
