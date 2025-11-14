@@ -51,9 +51,10 @@
                       },
                       "style": {
                         "backgroundColor": "white",
-                        "margin": "",
-                        "padding": "30 80 30 80",
-                        "opacity": ""
+                        "padding": "",
+                        "opacity": "",
+                        "height": "",
+                        "width": ""
                       },
                       "id": "background",
                       "editable": true,
@@ -63,20 +64,20 @@
                       "content": {
                         "value": "Top Products",
                         "label": "Headline",
-                        "type": "text",
-                        "for": "headlineText",
+                        "type": "title",
+                        "for": "Headline",
+                        "order": 2,
                         "link": ""
                       },
                       "style": {
                         "font": {
                           "family": "",
-                          "size": "40",
+                          "size": "",
                           "style": "",
                           "color": "black",
-                          "weight": "600"
+                          "weight": ""
                         },
-                        "backgroundColor": "",
-                        "margin": "0px 0px 0px 0px",
+                        "margin": "",
                         "padding": "10px 0px 20px 0px",
                         "alignment": "center"
                       },
@@ -96,11 +97,13 @@
                             {
                               "value": "Hydrating Facial Cleanser",
                               "label": "Text",
-                              "type": "text"
+                              "order": 4,
+                              "type": "title"
                             },
                             {
                               "value": "A gentle, non-foaming cleanser",
                               "label": "SubText",
+                              "order": 5,
                               "type": "text"
                             }
                           ],
@@ -113,11 +116,13 @@
                             {
                               "value": "The Ordinary Niacinamide",
                               "label": "Text",
-                              "type": "text"
+                              "order": 4,
+                              "type": "title"
                             },
                             {
                               "value": "A lightweight serum",
                               "label": "SubText",
+                              "order": 5,
                               "type": "text"
                             }
                           ],
@@ -130,11 +135,13 @@
                             {
                               "value": "Anthelios Milk Sunscreen",
                               "label": "Text",
-                              "type": "text"
+                              "order": 4,
+                              "type": "title"
                             },
                             {
                               "value": "A broad-spectrum sunscreen",
                               "label": "SubText",
+                              "order": 5,
                               "type": "text"
                             }
                           ],
@@ -147,11 +154,13 @@
                             {
                               "value": "Crystal Retinal 6",
                               "label": "Text",
-                              "type": "text"
+                              "order": 4,
+                              "type": "title"
                             },
                             {
                               "value": "A potent nighttime serum",
                               "label": "SubText",
+                              "order": 5,
                               "type": "text"
                             }
                           ]
@@ -165,11 +174,13 @@
                           {
                             "value": "Medik8 Crystal Retinal 6",
                             "label": "Text",
-                            "type": "text"
+                            "order": 4,
+                            "type": "title"
                           },
                           {
                             "value": "A potent nighttime serum featuring retinaldehyde, a stabilized form of vitamin A, which is known to effectively reduce signs of aging and improve skin texture.",
                             "label": "SubText",
+                            "order": 5,
                             "type": "text"
                           }
                         ],
@@ -188,7 +199,7 @@
                           "padding": "",
                           "border": {
                             "size": "1px",
-                            "color": "",
+                            "color": "black",
                             "radius": ""
                           }
                         },
@@ -197,12 +208,11 @@
                           "for": "text",
                           "font": {
                             "family": "",
-                            "size": "24",
+                            "size": "",
                             "style": "",
                             "color": "black",
-                            "weight": "500"
+                            "weight": ""
                           },
-                          "backgroundColor": "",
                           "margin": "",
                           "padding": "0 10 0 10",
                           "alignment": "left"
@@ -212,12 +222,11 @@
                           "for": "subText",
                           "font": {
                             "family": "",
-                            "size": "16",
+                            "size": "",
                             "style": "",
                             "color": "black",
-                            "weight": "400"
+                            "weight": ""
                           },
-                          "backgroundColor": "",
                           "margin": "",
                           "padding": "0 10 10 10",
                           "alignment": "left"
@@ -480,34 +489,34 @@
         "textWrap": "wrap",
         "sizes": {
           "h1": {
-            "fontSize": "16px",
-            "lineHeight": "22px",
-            "fontWeight": "500"
+            "fontSize": "56px",
+            "lineHeight": "64px",
+            "fontWeight": "600"
           },
           "h2": {
-            "fontSize": "14px",
-            "lineHeight": "18px",
-            "fontWeight": "500"
+            "fontSize": "40px",
+            "lineHeight": "48px",
+            "fontWeight": "600"
           },
           "h3": {
-            "fontSize": "12px",
-            "lineHeight": "16px",
+            "fontSize": "32px",
+            "lineHeight": "40px",
             "fontWeight": "500"
           },
           "h4": {
-            "fontSize": "10px",
-            "lineHeight": "14px",
+            "fontSize": "24px",
+            "lineHeight": "32px",
             "fontWeight": "500"
           },
           "h5": {
-            "fontSize": "8px",
-            "lineHeight": "10px",
-            "fontWeight": "500"
+            "fontSize": "18px",
+            "lineHeight": "26px",
+            "fontWeight": "400"
           },
           "h6": {
-            "fontSize": "6px",
-            "lineHeight": "8px",
-            "fontWeight": "500"
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "fontWeight": "400"
           }
         }
       },
@@ -554,9 +563,11 @@
         "xl": "0 calc(0.0625rem * var(--mantine-scale)) calc(0.1875rem * var(--mantine-scale)) rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05) 0 calc(2.25rem * var(--mantine-scale)) calc(1.75rem * var(--mantine-scale)) calc(-0.4375rem * var(--mantine-scale)), rgba(0, 0, 0, 0.04) 0 calc(1.0625rem * var(--mantine-scale)) calc(1.0625rem * var(--mantine-scale)) calc(-0.4375rem * var(--mantine-scale))"
       },
       "other": {
+        "margin": "",
+        "padding": "30 80 30 80",
+        "apfScale": 1,
         "colorFormat": "hex",
-        "colorHarmony": "split-complementary",
-        "apfScale": 1
+        "colorHarmony": "split-complementary"
       },
       "components": {}
     },

@@ -8,6 +8,7 @@ import {
   Image,
   Overlay,
   Text,
+  KText
 } from "@koadz/core";
 
 export default function GroupImageCards({ data, theme }) {
@@ -23,16 +24,46 @@ export default function GroupImageCards({ data, theme }) {
   const titleStyle = cardGroup?.groupStyles?.[1];
   const subTitleStyle = cardGroup?.groupStyles?.[2];
 
-  const getMargin = (margin) => {
+  const getMargin = (margin, spacingType) => {
+    if (!margin && spacingType === "section") {
+      margin = theme?.other?.margin || "0 0 0 0";
+    }
     if (!margin) return {};
-    let m = margin.split(" ");
-    return { mt: m[0], mr: m[1], mb: m[2], ml: m[3] };
+    const m = margin
+      .split(" ")
+      .map((val) => (val?.includes("px") ? parseInt(val) : Number(val) || 0));
+    const [top = 30, right = 80, bottom = 30, left = 80] = m;
+    return {
+      mt: { base: `${top / 2.5}px`, sm: `${top / 1.8}px`, md: `${top}px` },
+      mr: { base: `${right / 3}px`, sm: `${right / 2}px`, md: `${right}px` },
+      mb: {
+        base: `${bottom / 2.5}px`,
+        sm: `${bottom / 1.8}px`,
+        md: `${bottom}px`,
+      },
+      ml: { base: `${left / 3}px`, sm: `${left / 2}px`, md: `${left}px` },
+    };
   };
 
-  const getPadding = (padding) => {
+  const getPadding = (padding, spacingType) => {
+    if (!padding && spacingType === "section") {
+      padding = theme?.other?.padding || "0 0 0 0";
+    }
     if (!padding) return {};
-    let p = padding.split(" ");
-    return { pt: p[0], pr: p[1], pb: p[2], pl: p[3] };
+    const p = padding
+      .split(" ")
+      .map((val) => (val?.includes("px") ? parseInt(val) : Number(val) || 0));
+    const [top = 30, right = 80, bottom = 30, left = 80] = p;
+    return {
+      pt: { base: `${top / 2.5}px`, sm: `${top / 1.8}px`, md: `${top}px` },
+      pr: { base: `${right / 3}px`, sm: `${right / 2}px`, md: `${right}px` },
+      pb: {
+        base: `${bottom / 2.5}px`,
+        sm: `${bottom / 1.8}px`,
+        md: `${bottom}px`,
+      },
+      pl: { base: `${left / 3}px`, sm: `${left / 2}px`, md: `${left}px` },
+    };
   };
 
   const getColor = (color) => {
@@ -95,16 +126,17 @@ export default function GroupImageCards({ data, theme }) {
                     ...getBorderStyles(imgStyle?.border),
                     ...getMargin(imgStyle?.margin),
                     ...getPadding(imgStyle?.padding),
+                    minHeight: imgStyle?.height || "400px", 
+                    height: imgStyle?.height || "auto",
+                    width: imgStyle?.width || "100%",
+                    maxWidth: "100%",
+                    overflow: "hidden", 
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-end",
                   },
                 }}
-                h={imgStyle?.height || "400px"}
-                w={imgStyle?.width || "100%"}
                 pos={"relative"}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "flex-end", // pushes children to bottom
-                }}
                 {...imgData?.props}
               >
                 {isOverlay && (
@@ -116,14 +148,17 @@ export default function GroupImageCards({ data, theme }) {
                       ...getBorderStyles(imgStyle?.border),
                       ...getMargin(imgStyle?.margin),
                       ...getPadding(imgStyle?.padding),
+                      maxWidth: "100%",
                     }}
                     w={imgStyle?.width || "100%"}
                     h={imgStyle?.height || "400px"}
                   />
                 )}
 
-                <Text
+                <KText
                   id={`groupTestimonial_${index}`}
+                  value={titleData?.value}
+                  order={titleData?.order}
                   m={titleStyle?.margin}
                   p={titleStyle?.padding}
                   fz={{
@@ -139,19 +174,19 @@ export default function GroupImageCards({ data, theme }) {
                   ff={titleStyle?.font?.family}
                   ta={titleStyle?.alignment}
                   {...titleData?.props}
-                >
-                  {titleData?.value}
-                </Text>
-                <Text
+                />
+
+                <KText
                   id={`groupTestimonial_${index}`}
+                  value={subTitleData?.value}
+                  order={subTitleData?.order}
                   m={subTitleStyle?.margin}
                   p={subTitleStyle?.padding}
-                  fz={{
-                    base: "14px",
-                    sm: subTitleStyle?.font?.size || "16px",
-                  }}
+                  fz={
+                    subTitleStyle?.font?.size
+                  }
                   lh={{ base: "1.6", sm: "1.8" }}
-                  c={getColor(subTitleStyle?.font?.color || theme?.black)}
+                  c={getColor(subTitleStyle?.font?.color)}
                   bg={getColor(subTitleStyle?.backgroundColor || "transparent")}
                   // style={{
                   //   ...getBorderStyles(subTitleStyle?.border),
@@ -160,9 +195,8 @@ export default function GroupImageCards({ data, theme }) {
                   ta={subTitleStyle?.alignment}
                   ff={subTitleStyle?.font?.family}
                   {...subTitleData?.props}
-                >
-                  {subTitleData?.value}
-                </Text>
+                />
+              
               </BackgroundImage>
             </Box>
           </Grid.Col>
