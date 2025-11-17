@@ -161,10 +161,8 @@ export default function GroupImageCards({ data, theme }) {
                   order={titleData?.order}
                   m={titleStyle?.margin}
                   p={titleStyle?.padding}
-                  fz={{
-                    base: "18px",
-                    sm: titleStyle?.font?.size || "20px",
-                  }}
+                  fz={
+                    titleStyle?.font?.size}
                   c={getColor(titleStyle?.font?.color || theme?.black)}
                   bg={getColor(titleStyle?.backgroundColor || "transparent")}
                   // style={{

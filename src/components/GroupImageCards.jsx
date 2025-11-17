@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Card, Flex, Grid, Image, Overlay, Text } from "@koadz/core";
+import { Box, Card, Flex, Grid, Image, Overlay, Text, KText } from "@koadz/core";
 
 export default function GroupImageCards({ data, theme }) {
   let cardGroup;
@@ -122,35 +122,30 @@ export default function GroupImageCards({ data, theme }) {
                   zIndex: 2,
                 }}
               >
-                <Text
+                <KText
                   m={titleStyle?.margin}
                   p={titleStyle?.padding}
-                  fz={{
-                    base: "18px",
-                    sm: titleStyle?.font?.size || "20px",
-                  }}
+                  value={titleData?.value}
+                  order={titleData?.order}
+                  fz={titleStyle?.font?.size}
                   c={getColor(titleStyle?.font?.color)}
                   fw={titleStyle?.font?.weight}
                   ff={titleStyle?.font?.family}
                   ta={titleStyle?.alignment}
-                >
-                  {titleData?.value}
-                </Text>
-                <Text
+                />
+                  
+                <KText
                   m={subTitleStyle?.margin}
                   p={subTitleStyle?.padding}
-                  fz={{
-                    base: "14px",
-                    sm: subTitleStyle?.font?.size || "16px",
-                  }}
+                  value={subTitleData?.value}
+                  order={subTitleData?.order}
+                  fz={subTitleStyle?.font?.size}
                   lh={{ base: "1.6", sm: "1.8" }}
                   c={getColor(subTitleStyle?.font?.color)}
                   fw={subTitleStyle?.font?.weight}
                   ta={subTitleStyle?.alignment}
                   ff={subTitleStyle?.font?.family}
-                >
-                  {subTitleData?.value}
-                </Text>
+                />
               </Box>
             </Box>
           </Grid.Col>
