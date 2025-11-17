@@ -8,7 +8,7 @@ import {
   Image,
   Overlay,
   Text,
-  KText
+  KText,
 } from "@koadz/core";
 
 export default function GroupImageCards({ data, theme }) {
@@ -126,11 +126,11 @@ export default function GroupImageCards({ data, theme }) {
                     ...getBorderStyles(imgStyle?.border),
                     ...getMargin(imgStyle?.margin),
                     ...getPadding(imgStyle?.padding),
-                    minHeight: imgStyle?.height || "400px", 
+                    minHeight: imgStyle?.height || "400px",
                     height: imgStyle?.height || "auto",
                     width: imgStyle?.width || "100%",
                     maxWidth: "100%",
-                    overflow: "hidden", 
+                    overflow: "hidden",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "flex-end",
@@ -161,8 +161,7 @@ export default function GroupImageCards({ data, theme }) {
                   order={titleData?.order}
                   m={titleStyle?.margin}
                   p={titleStyle?.padding}
-                  fz={
-                    titleStyle?.font?.size}
+                  fz={titleStyle?.font?.size}
                   c={getColor(titleStyle?.font?.color || theme?.black)}
                   bg={getColor(titleStyle?.backgroundColor || "transparent")}
                   // style={{
@@ -180,9 +179,7 @@ export default function GroupImageCards({ data, theme }) {
                   order={subTitleData?.order}
                   m={subTitleStyle?.margin}
                   p={subTitleStyle?.padding}
-                  fz={
-                    subTitleStyle?.font?.size
-                  }
+                  fz={subTitleStyle?.font?.size}
                   lh={{ base: "1.6", sm: "1.8" }}
                   c={getColor(subTitleStyle?.font?.color)}
                   bg={getColor(subTitleStyle?.backgroundColor || "transparent")}
@@ -194,7 +191,6 @@ export default function GroupImageCards({ data, theme }) {
                   ff={subTitleStyle?.font?.family}
                   {...subTitleData?.props}
                 />
-              
               </BackgroundImage>
             </Box>
           </Grid.Col>

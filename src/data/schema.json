@@ -104,7 +104,7 @@
                             {
                               "value": "A gentle, non-foaming cleanser",
                               "label": "SubText",
-                              "order": 5,
+                              "order": "",
                               "type": "ktext"
                             }
                           ],
@@ -123,7 +123,7 @@
                             {
                               "value": "A lightweight serum",
                               "label": "SubText",
-                              "order": 5,
+                              "order": "",
                               "type": "ktext"
                             }
                           ],
@@ -142,7 +142,7 @@
                             {
                               "value": "A broad-spectrum sunscreen",
                               "label": "SubText",
-                              "order": 5,
+                              "order": "",
                               "type": "ktext"
                             }
                           ],
@@ -161,7 +161,7 @@
                             {
                               "value": "A potent nighttime serum",
                               "label": "SubText",
-                              "order": 5,
+                              "order": "",
                               "type": "ktext"
                             }
                           ]
@@ -181,7 +181,7 @@
                           {
                             "value": "A potent nighttime serum featuring retinaldehyde, a stabilized form of vitamin A, which is known to effectively reduce signs of aging and improve skin texture.",
                             "label": "SubText",
-                            "order": 5,
+                            "order": "",
                             "type": "ktext"
                           }
                         ],
