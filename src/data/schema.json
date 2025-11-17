@@ -46,6 +46,7 @@
                         "label": "Background",
                         "type": "img",
                         "for": "background",
+                        "noReplace": true,
                         "src": "",
                         "link": ""
                       },
