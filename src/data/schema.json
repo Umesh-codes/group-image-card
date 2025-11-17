@@ -64,7 +64,7 @@
                       "content": {
                         "value": "Top Products",
                         "label": "Headline",
-                        "type": "title",
+                        "type": "ktitle",
                         "for": "Headline",
                         "order": 2,
                         "link": ""
@@ -98,13 +98,13 @@
                               "value": "Hydrating Facial Cleanser",
                               "label": "Text",
                               "order": 4,
-                              "type": "title"
+                              "type": "ktitle"
                             },
                             {
                               "value": "A gentle, non-foaming cleanser",
                               "label": "SubText",
                               "order": 5,
-                              "type": "text"
+                              "type": "ktext"
                             }
                           ],
                           [
@@ -117,13 +117,13 @@
                               "value": "The Ordinary Niacinamide",
                               "label": "Text",
                               "order": 4,
-                              "type": "title"
+                              "type": "ktitle"
                             },
                             {
                               "value": "A lightweight serum",
                               "label": "SubText",
                               "order": 5,
-                              "type": "text"
+                              "type": "ktext"
                             }
                           ],
                           [
@@ -136,13 +136,13 @@
                               "value": "Anthelios Milk Sunscreen",
                               "label": "Text",
                               "order": 4,
-                              "type": "title"
+                              "type": "ktitle"
                             },
                             {
                               "value": "A broad-spectrum sunscreen",
                               "label": "SubText",
                               "order": 5,
-                              "type": "text"
+                              "type": "ktext"
                             }
                           ],
                           [
@@ -155,13 +155,13 @@
                               "value": "Crystal Retinal 6",
                               "label": "Text",
                               "order": 4,
-                              "type": "title"
+                              "type": "ktitle"
                             },
                             {
                               "value": "A potent nighttime serum",
                               "label": "SubText",
                               "order": 5,
-                              "type": "text"
+                              "type": "ktext"
                             }
                           ]
                         ],
@@ -175,13 +175,13 @@
                             "value": "Medik8 Crystal Retinal 6",
                             "label": "Text",
                             "order": 4,
-                            "type": "title"
+                            "type": "ktitle"
                           },
                           {
                             "value": "A potent nighttime serum featuring retinaldehyde, a stabilized form of vitamin A, which is known to effectively reduce signs of aging and improve skin texture.",
                             "label": "SubText",
                             "order": 5,
-                            "type": "text"
+                            "type": "ktext"
                           }
                         ],
                         "label": "Card Group",
