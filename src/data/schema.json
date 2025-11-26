@@ -96,13 +96,13 @@
                               "type": "img"
                             },
                             {
-                              "value": "Hydrating Facial Cleanser",
+                              "value": "Facial Cleanser",
                               "label": "Text",
                               "order": 4,
                               "type": "ktitle"
                             },
                             {
-                              "value": "A gentle, non-foaming cleanser",
+                              "value": "A gentle cleanser",
                               "label": "SubText",
                               "order": "",
                               "type": "ktext"
@@ -115,7 +115,7 @@
                               "type": "img"
                             },
                             {
-                              "value": "The Ordinary Niacinamide",
+                              "value": "The Niacinamide",
                               "label": "Text",
                               "order": 4,
                               "type": "ktitle"
@@ -134,7 +134,7 @@
                               "type": "img"
                             },
                             {
-                              "value": "Anthelios Milk Sunscreen",
+                              "value": "Milk Sunscreen",
                               "label": "Text",
                               "order": 4,
                               "type": "ktitle"

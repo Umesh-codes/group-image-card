@@ -143,7 +143,8 @@ export default function GroupImageCards({ data, theme }) {
                   <Overlay
                     color="#000"
                     opacity={0.33} // semi-transparent
-                    zIndex={1}
+                    zIndex={2}
+                    pos="absolute"
                     style={{
                       ...getBorderStyles(imgStyle?.border),
                       ...getMargin(imgStyle?.margin),
@@ -164,9 +165,10 @@ export default function GroupImageCards({ data, theme }) {
                   fz={titleStyle?.font?.size}
                   c={getColor(titleStyle?.font?.color || theme?.black)}
                   bg={getColor(titleStyle?.backgroundColor || "transparent")}
-                  // style={{
-                  //   ...getBorderStyles(titleStyle?.border),
-                  // }}
+                  style={{
+                    zIndex: 3,
+                    position: "relative",
+                  }}
                   fw={titleStyle?.font?.weight}
                   ff={titleStyle?.font?.family}
                   ta={titleStyle?.alignment}
@@ -183,9 +185,10 @@ export default function GroupImageCards({ data, theme }) {
                   lh={{ base: "1.6", sm: "1.8" }}
                   c={getColor(subTitleStyle?.font?.color)}
                   bg={getColor(subTitleStyle?.backgroundColor || "transparent")}
-                  // style={{
-                  //   ...getBorderStyles(subTitleStyle?.border),
-                  // }}
+                  style={{
+                    zIndex: 3,
+                    position: "relative",
+                  }}
                   fw={subTitleStyle?.font?.weight}
                   ta={subTitleStyle?.alignment}
                   ff={subTitleStyle?.font?.family}
