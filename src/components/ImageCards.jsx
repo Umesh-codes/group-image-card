@@ -18,6 +18,7 @@ export default function GroupImageCards({ data, theme }) {
     if (ele?.content?.for === "cardGroup") cardGroup = ele;
   });
   const isOverlay = data?.settings?.[0]?.value || false;
+  const gridOption = data?.settings?.[1]?.value || "4";
 
   const groupCards = cardGroup?.content?.value || [];
   const imgStyle = cardGroup?.groupStyles?.[0];
@@ -85,6 +86,17 @@ export default function GroupImageCards({ data, theme }) {
     };
   };
 
+  const getGridSpan = () => {
+    const num = Number(gridOption); // "2", "3", "4"
+    const mdSpan = 12 / num; // 6, 4, 3
+
+    return {
+      base: 12, // 1 per row on mobile
+      sm: 6, // 2 per row on small screens
+      md: mdSpan, // dynamic per user choice
+    };
+  };
+
   return (
     <Grid
       columns={12}
@@ -103,7 +115,7 @@ export default function GroupImageCards({ data, theme }) {
         return (
           <Grid.Col
             key={index}
-            span={{ base: 12, sm: 6, md: 3 }}
+            span={getGridSpan()}
             id={`groupTestimonial_${index}`}
           >
             <Box

@@ -37,6 +37,12 @@
                       "type": "boolean",
                       "value": true,
                       "label": "Overlay"
+                    },
+                    {
+                      "type": "dropdown",
+                      "value": "",
+                      "label": "Grid Options",
+                      "options": ["2", "3", "4", "5"]
                     }
                   ],
                   "data": [
@@ -173,13 +179,13 @@
                             "type": "img"
                           },
                           {
-                            "value": "Medik8 Crystal Retinal 6",
+                            "value": "Crystal Retinal 6",
                             "label": "Text",
                             "order": 4,
                             "type": "ktitle"
                           },
                           {
-                            "value": "A potent nighttime serum featuring retinaldehyde, a stabilized form of vitamin A, which is known to effectively reduce signs of aging and improve skin texture.",
+                            "value": "A potent nighttime serum.",
                             "label": "SubText",
                             "order": "",
                             "type": "ktext"
@@ -211,7 +217,7 @@
                             "family": "",
                             "size": "",
                             "style": "",
-                            "color": "white",
+                            "color": "#ffffff",
                             "weight": ""
                           },
                           "margin": "",
@@ -225,7 +231,7 @@
                             "family": "",
                             "size": "",
                             "style": "",
-                            "color": "white",
+                            "color": "#ffffff",
                             "weight": ""
                           },
                           "margin": "",
