@@ -19,7 +19,7 @@
                   "brikName": "GroupImageCards",
                   "type": "brik",
                   "editorId": "8b27f4a6-a465-428d-a252-542c732761cb",
-                  "version": "1.0.8",
+                  "version": "1.0.9",
                   "editable": true,
                   "style": {
                     "font": {
@@ -43,7 +43,12 @@
                       "type": "dropdown",
                       "value": "",
                       "label": "Grid Options",
-                      "options": ["2", "3", "4", "5"]
+                      "options": [
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                      ]
                     }
                   ],
                   "data": [
