@@ -36,7 +36,8 @@
                     {
                       "type": "boolean",
                       "value": true,
-                      "label": "Overlay"
+                      "label": "Stretch Last Row",
+                      "id": "lastrowfit"
                     },
                     {
                       "type": "dropdown",
@@ -57,11 +58,15 @@
                         "link": ""
                       },
                       "style": {
-                        "backgroundColor": "white",
-                        "padding": "",
+                        "blur": 0,
                         "opacity": "",
-                        "height": "",
-                        "width": ""
+                        "overlay": {
+                          "isOverlay": false,
+                          "color": "",
+                          "opacity": ""
+                        },
+                        "backgroundColor": "white",
+                        "padding": ""
                       },
                       "id": "background",
                       "editable": true,
@@ -204,6 +209,13 @@
                           "height": "",
                           "margin": "10 10 10 10",
                           "padding": "",
+                          "blur": "",
+                          "opacity": "1",
+                          "overlay": {
+                            "isOverlay": false,
+                            "color": "",
+                            "opacity": ""
+                          },
                           "border": {
                             "size": "1px",
                             "color": "black",
@@ -221,7 +233,7 @@
                             "weight": ""
                           },
                           "margin": "",
-                          "padding": "0 10 0 10",
+                          "padding": "30 30 0 30",
                           "alignment": "left"
                         },
                         {
@@ -235,7 +247,7 @@
                             "weight": ""
                           },
                           "margin": "",
-                          "padding": "0 10 10 10",
+                          "padding": "0 30 30 30",
                           "alignment": "left"
                         }
                       ],

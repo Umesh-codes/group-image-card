@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@koadz/brik-wrapper": "1.0.8",
-    "@koadz/core": "^1.0.14",
-    "@koadz/playground": "^1.3.78",
+    "@koadz/core": "^1.0.21",
+    "@koadz/playground": "^1.4.31",
     "@originjs/vite-plugin-federation": "1.3.5",
     "i": "^0.3.7",
     "npm": "^11.6.4",

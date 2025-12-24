@@ -17,7 +17,7 @@ export default function GroupImageCards({ data, theme }) {
   data?.data.forEach((ele) => {
     if (ele?.content?.for === "cardGroup") cardGroup = ele;
   });
-  const isOverlay = data?.settings?.[0]?.value || false;
+  const lastrowfill = data?.settings?.[0]?.value || false;
   const gridOption = data?.settings?.[1]?.value || "4";
 
   const groupCards = cardGroup?.content?.value || [];
@@ -101,7 +101,7 @@ export default function GroupImageCards({ data, theme }) {
     <Grid
       columns={12}
       w="100%"
-      gutter={0}
+      gutter={10}
       styles={{
         inner: {
           display: "flex",
@@ -112,74 +112,64 @@ export default function GroupImageCards({ data, theme }) {
       {groupCards.map((card, index) => {
         const [imgData, titleData, subTitleData] = card || [];
 
+        const itemsPerRow = parseInt(gridOption || "3", 10);
+        const isInLastRow =
+          index >= Math.floor(groupCards.length / itemsPerRow) * itemsPerRow;
+        const remainingItems = groupCards.length % itemsPerRow || itemsPerRow;
+        const spanForLastRow =
+          lastrowfill && isInLastRow && groupCards.length % itemsPerRow !== 0
+            ? 12 / remainingItems
+            : getGridSpan();
+
         return (
           <Grid.Col
             key={index}
-            span={getGridSpan()}
+            span={spanForLastRow}
             id={`groupTestimonial_${index}`}
           >
             <Box
               {...getMargin(imgStyle?.margin)}
               {...getPadding(imgStyle?.padding)}
               style={{
-                // ...getBorderStyles(imgStyle?.border),
-                // ...getMargin(imgStyle?.margin),
-                // ...getPadding(imgStyle?.padding),
-                h: imgStyle?.height || "400px",
-                w: imgStyle?.width || "100%",
+                flexShrink: 0,
+                width: imgStyle?.width || "100%", // always match the column width
+                maxWidth: "100%", // prevent overflow
+                minHeight: imgStyle?.height || "400px",
+                overflow: "hidden", // prevents overflow
+                ...getBorderStyles(imgStyle?.border),
               }}
             >
               <BackgroundImage
                 id={`groupTestimonial_${index}`}
+                overlayColor={getColor(imgStyle?.overlay?.color)}
+                isOverlay={imgStyle?.overlay?.isOverlay}
+                overlayOpacity={imgStyle?.overlay?.opacity}
+                blur={imgStyle?.blur}
+                opacity={imgStyle?.opacity}
+                fit="cover"
                 src={imgData?.src}
-                styles={{
-                  root: {
-                    backgroundColor: getColor(imgStyle?.backgroundColor),
-                    ...getBorderStyles(imgStyle?.border),
-                    ...getMargin(imgStyle?.margin),
-                    ...getPadding(imgStyle?.padding),
-                    minHeight: imgStyle?.height || "400px",
-                    height: imgStyle?.height || "auto",
-                    width: imgStyle?.width || "100%",
-                    maxWidth: "100%",
-                    overflow: "hidden",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-end",
-                  },
+                style={{
+                  width: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  display: "block",
+                  minHeight: imgStyle?.height || "400px",
+                  height: "auto",
                 }}
-                pos={"relative"}
                 {...imgData?.props}
               >
-                {isOverlay && (
-                  <Overlay
-                    color="#000"
-                    opacity={0.33} // semi-transparent
-                    zIndex={2}
-                    pos="absolute"
-                    style={{
-                      ...getBorderStyles(imgStyle?.border),
-                      ...getMargin(imgStyle?.margin),
-                      ...getPadding(imgStyle?.padding),
-                      maxWidth: "100%",
-                    }}
-                    w={imgStyle?.width || "100%"}
-                    h={imgStyle?.height || "400px"}
-                  />
-                )}
-
                 <KText
                   id={`groupTestimonial_${index}`}
                   value={titleData?.value}
                   order={titleData?.order}
-                  m={titleStyle?.margin}
-                  p={titleStyle?.padding}
+                  {...getMargin(titleStyle?.margin)}
+                  {...getPadding(titleStyle?.padding)}
                   fz={titleStyle?.font?.size}
                   c={getColor(titleStyle?.font?.color || theme?.black)}
-                  bg={getColor(titleStyle?.backgroundColor || "transparent")}
                   style={{
                     zIndex: 3,
                     position: "relative",
+                    width: "100%",
                   }}
                   fw={titleStyle?.font?.weight}
                   ff={titleStyle?.font?.family}
@@ -191,15 +181,14 @@ export default function GroupImageCards({ data, theme }) {
                   id={`groupTestimonial_${index}`}
                   value={subTitleData?.value}
                   order={subTitleData?.order}
-                  m={subTitleStyle?.margin}
-                  p={subTitleStyle?.padding}
+                  {...getMargin(subTitleStyle?.margin)}
+                  {...getPadding(subTitleStyle?.padding)}
                   fz={subTitleStyle?.font?.size}
-                  lh={{ base: "1.6", sm: "1.8" }}
                   c={getColor(subTitleStyle?.font?.color)}
-                  bg={getColor(subTitleStyle?.backgroundColor || "transparent")}
                   style={{
                     zIndex: 3,
                     position: "relative",
+                    width: "100%",
                   }}
                   fw={subTitleStyle?.font?.weight}
                   ta={subTitleStyle?.alignment}

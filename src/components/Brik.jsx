@@ -1,5 +1,11 @@
 import React from "react";
-import { BackgroundImage, Grid, Text, ThemeContextProvider, KText } from "@koadz/core";
+import {
+  BackgroundImage,
+  Grid,
+  Text,
+  ThemeContextProvider,
+  KText,
+} from "@koadz/core";
 import GroupImageCards from "./ImageCards";
 // import GroupImageCards from "./GroupImageCards";
 
@@ -74,6 +80,11 @@ function Brik({ data, theme }) {
         }}
         h={imageObj?.style?.height || "auto"}
         w={imageObj?.style?.width || "100%"}
+        overlayColor={getColor(imageObj?.style?.overlay?.color) || theme?.black}
+        isOverlay={imageObj?.style?.overlay?.isOverlay}
+        overlayOpacity={imageObj?.style?.overlay?.opacity}
+        blur={imageObj?.style?.blur}
+        opacity={imageObj?.style?.opacity}
         {...imageObj?.content?.props}
       >
         <Grid w="100%">
@@ -86,9 +97,7 @@ function Brik({ data, theme }) {
                 m={headlineText?.style?.margin}
                 p={headlineText?.style?.padding}
                 fz={headlineText?.style?.font?.size}
-                c={getColor(
-                  headlineText?.style?.font?.color
-                )}
+                c={getColor(headlineText?.style?.font?.color)}
                 fw={headlineText?.style?.font?.weight}
                 ta={headlineText?.style?.alignment}
                 ff={headlineText?.style?.font?.family}
