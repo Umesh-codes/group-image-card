@@ -94,8 +94,8 @@ function Brik({ data, theme }) {
                 id={headlineText?.id}
                 value={headlineText?.content?.value}
                 order={headlineText?.content?.order}
-                m={headlineText?.style?.margin}
-                p={headlineText?.style?.padding}
+                {...getMargin(headlineText?.style?.margin)}
+                {...getPadding(headlineText?.style?.padding)}
                 fz={headlineText?.style?.font?.size}
                 c={getColor(headlineText?.style?.font?.color)}
                 fw={headlineText?.style?.font?.weight}
